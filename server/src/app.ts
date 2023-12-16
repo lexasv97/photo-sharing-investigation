@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 import cors from 'cors'
 
 // import { router as indexRouter } from './routes/index'
-import { indexRouter } from './routes';
+import { indexRouter } from './routes/index';
 import { usersRouter } from './routes/users';
 
 const app = express();

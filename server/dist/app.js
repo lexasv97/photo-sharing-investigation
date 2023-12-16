@@ -10,7 +10,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const cors_1 = __importDefault(require("cors"));
 // import { router as indexRouter } from './routes/index'
-const routes_1 = require("./routes");
+const index_1 = require("./routes/index");
 const users_1 = require("./routes/users");
 const app = (0, express_1.default)();
 app.use((0, morgan_1.default)('dev'));
@@ -26,7 +26,7 @@ app.use((0, cors_1.default)({
 // app.use(
 //     cors()
 //   );
-app.use('/', routes_1.indexRouter);
+app.use('/', index_1.indexRouter);
 app.use('/users', users_1.usersRouter);
 mongoose_1.default
     .connect(process.env.MONGODB_URI)

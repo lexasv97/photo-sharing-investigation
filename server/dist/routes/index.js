@@ -9,5 +9,5 @@ const router = express_1.default.Router();
 exports.indexRouter = router;
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Express' });
+    res.send({ title: 'Express' });
 });
